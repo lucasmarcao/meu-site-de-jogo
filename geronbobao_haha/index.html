@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="https://image.flaticon.com/icons/png/512/3953/3953598.png" type="image/x-icon">
+	<title>marcao jogasso</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+		integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+
+<body onload="poder()">
+
+
+	<link rel="stylesheet" href="src/alienArmada.css">
+
+
+	<audio id="music" loop>
+		<source src="sounds/temadojogo.mp3" type="audio/mpeg">
+		<source src="sounds/temadojogo.ogg" type="audio/ogg">
+	</audio>
+	<audio id="shootSound">
+		<source src="sounds/shoot.mp3" type="audio/mpeg">
+		<source src="sounds/shoot.ogg" type="audio/ogg">
+	</audio>
+	<audio id="explosionSound">
+		<source src="sounds/explosion.mp3" type="audio/mpeg">
+		<source src="sounds/explosion.ogg" type="audio/ogg">
+	</audio>
+
+	<div id="regras">
+		<h2>REGRAS: </h2>
+		<ul>
+			<li>O seu trabalho vai ser <strong>eliminar</strong> todos os aliens.</li>
+			<li>Se eles chegarem na terra voce <strong>PERDE</strong>. </li>
+			<li>Quando voce MATAR <strong>60</strong> aliens o jogo acaba.</li>
+			<li> <strong>BOA SORTE!!!</strong></li>
+		</ul>
+	</div>
+
+	<div id="comandos">
+		<h2>COMANDOS: </h2>
+		<ul>
+			<li><strong>A</strong> pra ir pra esquerda</li>
+			<li><strong>D</strong> pra ir pra direita</li>
+			<li><strong>ESPACO</strong> ou <strong>ENTER</strong> pra atirar</li>
+			<li><strong>R</strong> pra recarregar a pagina</li>
+			<li>presione <strong>P</strong> para pausar o jogo.</li>
+		</ul>
+	</div>
+
+	<div id="stage">
+		<h1 onmouseenter="aletao(this)">LARGA O TIRO!</h1>
+		<canvas width="480" height="320"></canvas>
+		<div class="container">
+			<div class="row controles">
+				<div id="dir" class="col setao" onpointerdown="direita(this)" onpointerup="soltou(this)"></div>
+				<div id="pow" class="col setao" onpointerdown="centro(this)" onpointerup="soltou(this)"></div>
+				<div id="esq" class="col setao" onpointerdown="esquerda(this)" onpointerup="soltou(this)"></div>
+			</div>
+		</div>
+	</div>
+
+	
+
+	<script src="src/objects.js"></script>
+	<script src="src/collisionDetection.js"></script>
+	<script src="src/alienArmada.js"></script>
+	<script>
+		function aletao() {
+			var a = 0
+			if (a == 0) {
+				window.alert("aperta a tecla R lugui EU CONSEGUI dar AUTOPLAY (depois que a musiquinha tocar n precisa mais)")
+				a = 1
+			}
+			
+		}
+	</script>
+</body>
+
+</html>

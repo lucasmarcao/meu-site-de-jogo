@@ -1,0 +1,172 @@
+@font-face {
+  font-family: AlienArmada;
+  src: url("../fonts/emulogic.ttf");
+}
+
+
+body{
+  background: darkcyan;
+  scrollbar-highlight-color: aquamarine;
+  font-family: AlienArmada;
+  
+}
+
+
+.container{
+  height: 20%;
+}
+div {
+  position: relative;
+  margin: 0 auto;
+  width: 48%;
+  height: 600px;
+  background: -webkit-linear-gradient(top, rgb(106, 0, 245) 60%, black);
+  border-radius: 10px;
+  border: black solid 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+canvas {
+	position: relative;
+	margin-left: 11%;
+  padding: -5px;
+  border: black groove 5px;
+}
+
+h2{
+	font-size: 28px;
+}
+
+.container {
+  margin-left: 3%;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+.controles {
+  height: 20%;
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  justify-content: center;
+  background: none;
+  background-color: transparent;
+}
+
+.setao {
+  margin: 10px;
+  padding: 2px;
+  height: 75px;
+  width: 75px;
+}
+
+#dir {
+  background: url("https://cdn-icons-png.flaticon.com/512/929/929756.png"),
+    linear-gradient(rgb(209, 255, 6), aqua);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 2px;
+}
+#pow {
+  background: url("https://imagensemoldes.com.br/wp-content/uploads/2020/04/Imagem-Raio-PNG-868x1024.png"),
+    linear-gradient(rgb(209, 255, 6), aqua);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 2px;
+
+}
+#esq {
+  background: url("https://cdn-icons-png.flaticon.com/512/2087/2087653.png"),
+    linear-gradient(rgb(209, 255, 6), aqua);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 2px;
+
+}
+
+ul,
+li,
+strong,
+h2,
+h1 {
+  background: gold;
+}
+
+ul {
+  list-style: "\25BA";
+}
+
+#comandos {
+  float: right;
+  height: 550px;
+  width: 25%;
+}
+
+#regras {
+  float: left;
+  height: 550px;
+  width: 25%;
+}
+
+strong {
+  color: red;
+}
+
+li {
+  padding: 10px 0;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
+  color: aliceblue;
+  border: 3px darkcyan solid;
+  border-radius: 5px;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  background-color: rgb(32, 8, 63);
+}
+
+@media (max-width: 1024px) {
+  body {
+    margin: 1px;
+    overflow-y: visible;
+  }
+  canvas {
+    width: 90%;
+    margin-left: 4%;
+  }
+
+  div {
+    margin-bottom: 20%;
+		height: 90%;
+    width: 95%;
+  }
+
+  #stage{
+    position: relative;
+    bottom: 1100px;
+    
+  }
+  #comandos {
+    float: initial;
+    position: relative;
+    word-wrap: break-word;
+    height: 100%;
+    width: 90%;
+    margin-top: 0;
+    top: 550px;
+  }
+
+  #regras {
+    margin-top: 30%;
+    float: initial;
+    position: relative;
+    word-wrap: break-word;
+    height: 100%;
+    width: 90%;
+    top: 550px;
+    margin-bottom: 40%;
+  }
+}
